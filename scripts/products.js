@@ -9,8 +9,8 @@ export const renderProductList = async () => {
   <div class="productCard" ">
   <img src=${x.url} class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${x.price}</h5>
     <h2 class="productName">Product: ${x.name}</h2>
+    <h5 class="card-title">${x.price}€</h5>
     <button id= "addCard">Add to Card</button>
     </div>
 </div>

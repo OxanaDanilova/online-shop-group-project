@@ -4,5 +4,23 @@
     "name": "iPhone",
     "price": 550,
     "url": "https://files.refurbed.com/pp/193_sil.jpg?t=resize&h=600&w=800"
+  },
+  {
+    "id": 2,
+    "name": "Bend R5 braun",
+    "price": 1779,
+    "url": "https://images.internetstores.de/products/1536377/02/0b108d/polygon-bend-r5-charcoal-brown-7.jpg?forceSize=true&forceAspectRatio=true&useTrim=true&size=613x613"
+  },
+  {
+    "id": 3,
+    "name": "De'Longhi Dedica Style EC 685",
+    "price": 154.99,
+    "url": "https://m.media-amazon.com/images/I/71TFR-W9xdL._AC_SY450_.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Akku-Schlagbohrschrauber-Set 'DHP453FX12' 18 V, 104-teilig",
+    "price": 179.99,
+    "url": "https://static.toom.de/produkte/bilder/1501822/1501822_2.png?format=jpg&quality=75&width=700"
   }
 ]
