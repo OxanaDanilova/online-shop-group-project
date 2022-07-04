@@ -1,8 +1,8 @@
-import { renderProductList } from './products'
-import { renderCart } from './cart'
-import {addToCard} from './cart'
+import { renderProductList } from './products.js'
+import { renderCart, addToCard } from './cart.js'
 
 renderProductList()
 renderCart()
 addToCard()
+
 
