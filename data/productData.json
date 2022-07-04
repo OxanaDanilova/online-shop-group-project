@@ -1,5 +1,8 @@
-[{
+[
+  {
     "id": 1,
     "name": "iPhone",
-    "price": 550
-}]
+    "price": 550,
+    "url": "https://files.refurbed.com/pp/193_sil.jpg?t=resize&h=600&w=800"
+  }
+]

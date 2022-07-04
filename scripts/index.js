@@ -1,5 +1,5 @@
-import { renderProductList } from './products'
-import { renderCart } from './cart'
+import { renderProductList } from "./products.js";
+//import { renderCart } from './cart'
 
-renderProductList()
-renderCart()
+renderProductList();
+//renderCart()
