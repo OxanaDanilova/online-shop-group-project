@@ -1,6 +1,6 @@
 export const renderProductList = async () => {
   const response = await fetch(
-    "https://raw.githubusercontent.com/fbw-d05/spa-26-modules-shopping-oxaluahol/main/data/productData.json?token=GHSAT0AAAAAABPWBDLCDED4WOMY3MTF6XT4YWC3ZXA"
+    "https://raw.githubusercontent.com/fbw-d05/spa-26-modules-shopping-oxaluahol/main/data/productData.json?token=GHSAT0AAAAAABPWBDLC6I66IWKFILNJNECKYWC6BRQ"
   );
   const data = await response.json();
   console.log(data);
