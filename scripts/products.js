@@ -11,7 +11,7 @@ export const renderProductList = async () => {
     <div class="card-body">
       <h2 class="productName">${x.name}</h2>
       <h5 class="card-title">${x.price}€</h5>
-      <button class= "addCard"><i class="fa-solid fa-cart-shopping"></i> Add to Card</button>
+      <button class= "addCard"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
     </div>
 </div>
   `;
