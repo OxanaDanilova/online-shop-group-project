@@ -11,6 +11,7 @@ export const renderCart = () => {
 
     productsArr.forEach((product) => {
       const productCard = document.createElement("div");
+      productCard.classList.add("userProduct");
       productCard.style.cssText =
         "padding: 1rem; display: flex; justify-content: space-between; background-color: white; width: 500px; margin-bottom: 1rem; border-radius: 1rem;";
 
@@ -24,12 +25,19 @@ export const renderCart = () => {
         "padding: 1rem; width: 200px; height: 200px;";
 
       const productTitle = document.createElement("h3");
+      productTitle.classList.add("productName");
       productTitle.textContent = `Product: ${product.name}`;
 
       const productPrice = document.createElement("p");
       productPrice.textContent = `Price: ${product.price}`;
 
-      productCardWrapper.append(productTitle, productPrice);
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove from cart";
+      removeBtn.classList.add("remove");
+      removeBtn.addEventListener("click", removeFromCart);
+      // removeBtn.cssText = "border: 1px solid grey;";
+
+      productCardWrapper.append(productTitle, productPrice, removeBtn);
 
       productCard.append(productImage, productCardWrapper);
 
@@ -39,13 +47,10 @@ export const renderCart = () => {
 };
 
 export const addToCard = (event) => {
-  console.log(event);
   const cardElement = event.target.closest(".productCard");
-  console.log("elem", cardElement);
   const productName = cardElement.querySelector(".productName").textContent;
   const productPrice = cardElement.querySelector(".card-title").textContent;
   const productImg = cardElement.querySelector("img").src;
-  console.log(productName, productPrice, productImg);
   const obj = {
     name: productName,
     price: productPrice,
@@ -59,3 +64,19 @@ export const addToCard = (event) => {
   localStorage.setItem("products", JSON.stringify(arr));
   renderCart();
 };
+
+function removeFromCart(event) {
+  const cardElement = event.target.closest(".userProduct");
+  const productName = cardElement
+    .querySelector(".productName")
+    .textContent.substring(9);
+
+  if (window.localStorage.getItem("products")) {
+    const arr = JSON.parse(localStorage.getItem("products"));
+    const productObj = arr.filter((el) => el.name === productName);
+    const index = arr.indexOf(...productObj);
+    arr.splice(index, 1);
+    localStorage.setItem("products", JSON.stringify(arr));
+    renderCart();
+  }
+}
