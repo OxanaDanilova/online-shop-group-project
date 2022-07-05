@@ -1,7 +1,9 @@
+import { renderCart, addToCard } from "./cart.js";
 export const renderProductList = async () => {
   const response = await fetch("./data/productData.json");
   const data = await response.json();
   console.log(data);
+
   data.map((x) => {
     document.querySelector("#products").innerHTML += `
 <div class="productCard">
@@ -9,9 +11,15 @@ export const renderProductList = async () => {
     <div class="card-body">
       <h2 class="productName">${x.name}</h2>
       <h5 class="card-title">${x.price}€</h5>
-      <button id= "addCard"><i class="fa-solid fa-cart-shopping"></i> Add to Card</button>
+      <button class= "addCard"><i class="fa-solid fa-cart-shopping"></i> Add to Card</button>
     </div>
 </div>
   `;
   });
+  const buttons = document.querySelectorAll(".addCard");
+  buttons.forEach((button) => {
+    button.addEventListener("click", addToCard);
+    console.log(button);
+  });
+  console.log(buttons);
 };
