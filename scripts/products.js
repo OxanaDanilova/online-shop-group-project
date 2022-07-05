@@ -19,7 +19,5 @@ export const renderProductList = async () => {
   const buttons = document.querySelectorAll(".addCard");
   buttons.forEach((button) => {
     button.addEventListener("click", addToCard);
-    console.log(button);
   });
-  console.log(buttons);
 };

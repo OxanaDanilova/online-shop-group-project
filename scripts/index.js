@@ -1,6 +1,5 @@
 import { renderProductList } from "./products.js";
-import { renderCart, addToCard } from "./cart.js";
+import { renderCart } from "./cart.js";
 
 renderProductList();
 renderCart();
-addToCard();
