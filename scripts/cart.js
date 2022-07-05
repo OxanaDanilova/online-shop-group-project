@@ -66,14 +66,11 @@ export const addToCard = (e) => {
    price: productPrice,
    url: productImg
  }
- if(window.localStorage.getItem("products")){
-   const arr = JSON.parse(localStorage.getItem("products")) 
-   arr.push(obj);
-   localStorage.setItem('products',JSON.stringify(arr)) 
- 
- }else{
-   const arr = [];
+let arr=[];
+if(window.localStorage.getItem("products")){
+   arr = JSON.parse(localStorage.getItem("products"));
  }
- 
-    
+   arr.push(obj);
+   localStorage.setItem('products',JSON.stringify(arr));
+renderCart();
 };
