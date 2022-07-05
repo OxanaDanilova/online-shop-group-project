@@ -3,6 +3,26 @@ body {
   font-family: "Lato", sans-serif;
   width: 100vw;
   background-color: #f2f3f4;
+  display: grid;
+  grid:
+    "head head head" 100px
+    "products products cart" 1fr
+    / 30% 30% 30%;
+  gap: 8px;
+}
+#warenkorb {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+.head {
+  grid-area: head;
+}
+.products {
+  grid-area: products;
+}
+.cart {
+  grid-area: cart;
 }
 
 h1 {
