@@ -55,7 +55,7 @@ export const renderCart = () => {
   }
 };
 
-export const addToCard = () => {
+export const addToCard = (e) => {
   const cardElement = e.target.closest(".productCard");
   const productName = cardElement.querySelector(".productName").textContent
   const productPrice = cardElement.querySelector(".card-title").textContent
