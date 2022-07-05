@@ -56,13 +56,24 @@ export const renderCart = () => {
 };
 
 export const addToCard = () => {
-  /*const addcard = document.getElementById("addCard");
-  addcard.addEventListener("click", () => {
-    console.log("test");
-     const cart = document.getElementById("cart");
-    window.localStorage.setItem("name", data[x].name);
-    const li = document.createElement("li");
-    li.textContent = data[x].name;
-    card.appenChild(li); 
-  });*/
+  const cardElement = e.target.closest(".productCard");
+  const productName = cardElement.querySelector(".productName").textContent
+  const productPrice = cardElement.querySelector(".card-title").textContent
+  const productImg = cardElement.querySelector("img").src
+ console.log(productName,productPrice,productImg)
+ const obj ={
+   name: productName,
+   price: productPrice,
+   url: productImg
+ }
+ if(window.localStorage.getItem("products")){
+   const arr = JSON.parse(localStorage.getItem("products")) 
+   arr.push(obj);
+   localStorage.setItem('products',JSON.stringify(arr)) 
+ 
+ }else{
+   const arr = [];
+ }
+ 
+    
 };
