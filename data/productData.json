@@ -2,25 +2,37 @@
   {
     "id": 1,
     "name": "iPhone",
-    "price": 550,
+    "price": 550.0,
     "url": "https://files.refurbed.com/pp/193_sil.jpg?t=resize&h=600&w=800"
   },
   {
     "id": 2,
     "name": "Bend R5 braun",
-    "price": 1779,
+    "price": 1779.0,
     "url": "https://images.internetstores.de/products/1536377/02/0b108d/polygon-bend-r5-charcoal-brown-7.jpg?forceSize=true&forceAspectRatio=true&useTrim=true&size=613x613"
   },
   {
     "id": 3,
-    "name": "De'Longhi Dedica Style EC 685",
-    "price": 154.99,
-    "url": "https://m.media-amazon.com/images/I/71TFR-W9xdL._AC_SY450_.jpg"
+    "name": "FAHRRADBRILLE",
+    "price": 154.0,
+    "url": "https://cdn.shopify.com/s/files/1/0334/1837/9401/products/FahrradbrillefuerRennrad_MTB_Enduro_DamenundHerrenSonnenbrille_800x.jpg?v=1650967430"
   },
   {
     "id": 4,
-    "name": "Akku-Schlagbohrschrauber-Set 'DHP453FX12' 18 V, 104-teilig",
+    "name": "Schlagbohrschrauber-Set",
     "price": 179.99,
     "url": "https://static.toom.de/produkte/bilder/1501822/1501822_2.png?format=jpg&quality=75&width=700"
+  },
+  {
+    "id": 5,
+    "name": "Deuter Futura Backpack",
+    "price": 140.0,
+    "url": "https://www.bergruft24.de/media/image/product/98140/lg/deuter-futura-26-turmeric-greencurry.jpg"
+  },
+  {
+    "id": 4,
+    "name": "ITWIT - Kajak",
+    "price": 989.99,
+    "url": "https://contents.mediadecathlon.com/p1884261/k$57a9d0fdf45d278c68d07c98ea5ccee0/sq/kajak-aufblasbar-drop-stitch-hochdruck-x500-2-sitzer.jpg?format=auto&f=969x969&quality=40"
   }
 ]
