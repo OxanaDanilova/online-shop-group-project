@@ -85,3 +85,16 @@ button:hover {
   top: 50px;
   right: 50px;
 }
+
+.userProduct,
+.totalCard {
+  box-shadow: 9px 10px 25px 1px rgba(0, 0, 0, 0.8);
+}
+
+.totalCard {
+  padding: 1rem;
+  background-color: white;
+  width: 500px;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}

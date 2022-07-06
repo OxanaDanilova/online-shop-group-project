@@ -46,6 +46,18 @@ export const renderCart = () => {
 
       cartSection.append(productCard);
     });
+
+    const totalCard = document.createElement("div");
+    totalCard.classList.add("totalCard");
+    const totalItems = document.createElement("p");
+    totalItems.textContent = `Total Items: ${productsArr.length}`;
+    const totalPriceEl = document.createElement("p");
+    const totalPrice = productsArr
+      .map((el) => parseFloat(el.price))
+      .reduce((cur, acc) => cur + acc, 0);
+    totalPriceEl.textContent = `Total Price: ${totalPrice} €`;
+    totalCard.append(totalItems, totalPriceEl);
+    cartSection.append(totalCard);
   } else {
     const cartSection = document.querySelector("#cart");
     cartSection.innerHTML = "";
