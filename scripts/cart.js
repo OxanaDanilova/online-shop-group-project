@@ -1,5 +1,8 @@
 export const renderCart = () => {
-  if (localStorage.getItem("products")) {
+  if (
+    localStorage.getItem("products") &&
+    JSON.parse(localStorage.getItem("products")).length != 0
+  ) {
     const productsArr = JSON.parse(localStorage.getItem("products"));
     const cartSection = document.querySelector("#cart");
     cartSection.innerHTML = "";
@@ -32,7 +35,7 @@ export const renderCart = () => {
       productPrice.textContent = `Price: ${product.price}`;
 
       const removeBtn = document.createElement("button");
-      removeBtn.textContent = "Remove from cart";
+      removeBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i> Remove from cart`;
       removeBtn.classList.add("remove");
       removeBtn.addEventListener("click", removeFromCart);
       // removeBtn.cssText = "border: 1px solid grey;";
@@ -43,6 +46,17 @@ export const renderCart = () => {
 
       cartSection.append(productCard);
     });
+  } else {
+    const cartSection = document.querySelector("#cart");
+    cartSection.innerHTML = "";
+    cartSection.style.backgroundColor = "#f2f3f4";
+    const cartTitle = document.createElement("h1");
+    cartTitle.textContent = "Cart";
+    cartTitle.style.cssText = "padding: 1rem; font-size:1.5rem;";
+
+    const mes = document.createElement("h4");
+    mes.innerHTML = `Your Cart is empty <i class="fa-solid fa-cart-arrow-down"></i>`;
+    cartSection.append(cartTitle, mes);
   }
 };
 
