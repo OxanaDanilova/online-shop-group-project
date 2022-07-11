@@ -1,4 +1,4 @@
-import { renderCart, addToCard } from "./cart.js";
+import { addToCard } from "./cart.js";
 export const renderProductList = async () => {
   const response = await fetch("./data/productData.json");
   const data = await response.json();
