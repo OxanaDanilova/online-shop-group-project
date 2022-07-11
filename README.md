@@ -1,6 +1,6 @@
 # Shopping
 
-**[Test this app yourself](github.link)**
+**[Test this app yourself](https://oxanadanilova.github.io/online-shop-group-project/)**
 
 ---
 
